@@ -91,11 +91,7 @@
         <h2>24 tools. Two pages. One interface.</h2>
       </div>
       <div class="interface-wrap reveal">
-        <div class="page-switch" role="tablist" aria-label="Terminal page preview">
-          <button class="active" type="button" data-page="1">Page 1</button>
-          <button type="button" data-page="2">Page 2</button>
-        </div>
-        <div class="terminal menu-terminal">
+        <div class="terminal menu-terminal" id="menuTerminal" tabindex="0" aria-label="Use N and P keys to navigate pages, Enter to preview">
           <div class="terminal-top"><div class="traffic"><span></span><span></span><span></span></div><span class="terminal-title">AXION MENU PREVIEW</span><span id="pageLabel">PAGE 1 / 2</span></div>
           <div class="terminal-body">
             <div class="tool-grid active" id="toolsPage1">
@@ -108,7 +104,7 @@
               <div><h4>NETWORK</h4><p>[17] DNS Test</p><p>[18] IP Information</p><p>[19] Ping Test</p><p>[20] Network Info</p></div>
               <div><h4>QUICK ACCESS</h4><p>[21] Downloads</p><p>[22] Documents</p><p>[23] Desktop</p><p>[24] AppData</p></div>
             </div>
-            <div class="menu-bottom"><span>[N] Next Page</span><span>[P] Previous</span><span>[G] Check Update</span><span>[E] Exit</span></div>
+            <div class="menu-bottom"><span>[N] Next Page</span><span>[P] Previous</span><span>[Enter] Preview</span></div>
             <p class="launch">LAUNCH &gt;<span class="cursor"></span></p>
           </div>
         </div>
