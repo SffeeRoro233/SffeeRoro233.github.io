@@ -212,11 +212,11 @@ a { color: inherit; text-decoration: none; }
 .terminal-line.accent { color: var(--pink); font-weight: 800; }
 .terminal-line span { color: var(--blue); float: right; }
 .muted { color: var(--muted); }
-.terminal-grid, .tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid rgba(255, 20, 130, 0.38); margin: 1rem 0; }
-.terminal-grid div, .tool-grid div { padding: 0.8rem; border-right: 1px solid rgba(255, 20, 130, 0.32); }
+.terminal-grid, .tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid rgba(255, 20, 130, 0.38); margin: 1rem 0; }
+.terminal-grid div, .tool-grid div { padding: 1rem 1.1rem; border-right: 2px solid rgba(255, 20, 130, 0.32); }
 .terminal-grid div:last-child, .tool-grid div:last-child { border-right: 0; }
-.terminal-grid b, .tool-grid h4 { display: block; color: var(--text); text-align: center; margin-bottom: 0.55rem; font-size: 0.82rem; }
-.terminal-grid span, .tool-grid p { display: block; color: #e8e1f4; font-size: 0.83rem; margin: 0.25rem 0; }
+.terminal-grid b, .tool-grid h4 { display: block; color: var(--text); text-align: center; margin-bottom: 0.55rem; font-size: 1rem; }
+.terminal-grid span, .tool-grid p { display: block; color: #e8e1f4; font-size: 0.92rem; margin: 0.25rem 0; }
 .launch { color: var(--magenta); margin-top: 0.9rem; }
 .cursor { display: inline-block; width: 0.55rem; height: 1rem; margin-left: 0.35rem; background: var(--text); vertical-align: -0.12rem; animation: blink 1s steps(2, start) infinite; }
 
@@ -244,8 +244,27 @@ a { color: inherit; text-decoration: none; }
 .page-switch { display: flex; gap: 0.7rem; justify-content: center; }
 .page-switch button { border: 1px solid var(--line); background: rgba(255,255,255,0.04); color: var(--muted); padding: 0.65rem 1rem; border-radius: 999px; font: 800 0.9rem var(--mono); cursor: pointer; }
 .page-switch button.active { color: var(--text); border-color: rgba(245,20,175,0.55); background: linear-gradient(90deg, rgba(255,25,90,0.18), rgba(75,95,255,0.16)); }
-.tool-grid { display: none; }
-.tool-grid.active { display: grid; }
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid rgba(255, 20, 130, 0.38);
+  margin: 1rem 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: opacity 0.45s ease, visibility 0.45s ease, max-height 0.45s ease, padding 0.45s ease, margin 0.45s ease;
+}
+.tool-grid.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  max-height: 600px;
+  padding: 0.8rem;
+  margin: 1rem 0;
+}
 .menu-bottom { display: flex; justify-content: space-between; gap: 1rem; color: var(--blue); font-family: var(--mono); font-size: 0.82rem; margin-top: 0.6rem; }
 .menu-bottom span:nth-child(4) { color: var(--pink); }
 
@@ -274,6 +293,10 @@ a { color: inherit; text-decoration: none; }
 @keyframes gradientShift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 @keyframes blink { 50% { opacity: 0; } }
 @keyframes softWave { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+.interface-section { padding: 7rem 0; }
+.interface-section .menu-terminal { min-height: 420px; }
+.menu-terminal .terminal-body { padding: 1.5rem; }
+
 @keyframes drift { 0%,100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(2rem, -1rem, 0); } }
 
 @media (max-width: 900px) {
@@ -284,9 +307,13 @@ a { color: inherit; text-decoration: none; }
   .app-controls .launch, .page-count { justify-self: center; }
   .version-grid, .features-grid, .platform-strip { grid-template-columns: repeat(2, 1fr); }
   .terminal-grid, .tool-grid { grid-template-columns: 1fr; }
-  .terminal-grid div, .tool-grid div { border-right: 0; border-bottom: 1px solid rgba(255,20,130,0.32); }
+  .terminal-grid div, .tool-grid div { border-right: 0; border-bottom: 2px solid rgba(255,20,130,0.32); }
   .terminal-grid div:last-child, .tool-grid div:last-child { border-bottom: 0; }
 }
+
+  .interface-section { padding: 4rem 0; }
+  .interface-section .menu-terminal { min-height: 280px; }
+  .menu-terminal .terminal-body { padding: 0.9rem; }
 
 @media (max-width: 600px) {
   .navbar { top: 0.7rem; width: calc(100% - 1rem); border-radius: 1rem; }
