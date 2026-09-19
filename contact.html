@@ -4,50 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contactez l'équipe Axion">
-  <title>Axion - Contact</title>
+  <title>axion - contact</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="banner">
-    <nav>
-      <div class="logo">
-        <span class="logo-circle"></span>
-        <span>Axi</span><span class="gradient-text">on</span>
+    <div class="terminal-bar">
+      <div class="win-controls">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
       </div>
+      <div class="win-title">
+        <span class="logo">
+          <img class="logo-img" src="logo.png" alt="Axion logo" onerror="this.style.display='none'">
+          <span class="logo-fallback">AXION</span>
+        </span>
+      </div>
+    </div>
+    <nav>
       <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="a-propos.html">À propos</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><span class="prompt">C:\AXION&gt;</span><a href="index.html">acceuil.exe</a></li>
+        <li><span class="prompt">C:\AXION&gt;</span><a href="a-propos.html">apropos.exe</a></li>
+        <li><span class="prompt">C:\AXION&gt;</span><a href="contact.html" class="active">contact.exe</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="page-hero">
-      <h1 class="gradient-text reveal">Contactez-nous</h1>
-      <p class="reveal">Une question ? On vous répond rapidement.</p>
-    </section>
+    <section class="terminal">
+      <div class="term-window">
+        <div class="term-body">
 
-    <section class="content reveal">
-      <form id="contact-form">
-        <label for="name">Nom</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          <p class="line"><span class="prompt2">C:\AXION&gt;</span> contact --init</p>
+          <p class="line dim">&gt;&gt; canal de communication ouvert.</p>
+          <p class="line dim">&gt;&gt; remplissez le formulaire pour transmettre votre message.</p>
+          <p class="line empty">&nbsp;</p>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+          <form id="contact-form" class="term-form">
+            <p class="line">
+              <span class="prompt2">nom     &gt;</span>
+              <input type="text" id="name" name="name" placeholder="votre_nom" required>
+            </p>
+            <p class="line">
+              <span class="prompt2">email   &gt;</span>
+              <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+            </p>
+            <p class="line">
+              <span class="prompt2">message &gt;</span>
+            </p>
+            <p class="line">
+              <textarea id="message" name="message" rows="6" placeholder="saisissez votre message..." required></textarea>
+            </p>
+            <p class="line">
+              <button type="submit" class="btn-term">&gt; ENVOYER_MESSAGE.EXE</button>
+            </p>
+            <p id="form-status" class="line ok form-status"></p>
+          </form>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+          <p class="line empty">&nbsp;</p>
+          <p class="line blink">C:\AXION&gt;_</p>
 
-        <button type="submit" class="btn primary">Envoyer le message</button>
-        <p id="form-status" class="form-status"></p>
-      </form>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Axion - Tous droits réservés</p>
+    <p>c:\axion system v2.0 &nbsp;|&nbsp; (c) 2026 Axion Corporation - Tous droits reserves</p>
   </footer>
 
   <script src="script.js"></script>

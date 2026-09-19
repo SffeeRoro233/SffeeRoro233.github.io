@@ -4,46 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="À propos d'Axion">
-  <title>Axion - À propos</title>
+  <title>axion - apropos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="banner">
-    <nav>
-      <div class="logo">
-        <span class="logo-circle"></span>
-        <span>Axi</span><span class="gradient-text">on</span>
+    <div class="terminal-bar">
+      <div class="win-controls">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
       </div>
+      <div class="win-title">
+        <span class="logo">
+          <img class="logo-img" src="logo.png" alt="Axion logo" onerror="this.style.display='none'">
+          <span class="logo-fallback">AXION</span>
+        </span>
+      </div>
+    </div>
+    <nav>
       <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="a-propos.html" class="active">À propos</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><span class="prompt">C:\AXION&gt;</span><a href="index.html">acceuil.exe</a></li>
+        <li><span class="prompt">C:\AXION&gt;</span><a href="a-propos.html" class="active">apropos.exe</a></li>
+        <li><span class="prompt">C:\AXION&gt;</span><a href="contact.html">contact.exe</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="page-hero">
-      <h1 class="gradient-text reveal">À propos d'Axion</h1>
-      <p class="reveal">Un logiciel pensé pour vous simplifier la vie.</p>
-    </section>
+    <section class="terminal">
+      <div class="term-window">
+        <div class="term-body">
 
-    <section class="content reveal">
-      <h2>Notre mission</h2>
-      <p>Chez Axion, nous croyons que la technologie doit être simple, belle et accessible. Notre mission est de créer des outils qui allient performance et élégance, pour que chacun puisse se concentrer sur l'essentiel.</p>
+          <p class="line"><span class="prompt2">C:\AXION&gt;</span> type apropos.txt</p>
+          <p class="line empty">&nbsp;</p>
+          <p class="line boldline">============================================</p>
+          <p class="line boldline">  A PROPOS DU LOGICIEL AXION v2.0</p>
+          <p class="line boldline">============================================</p>
+          <p class="line empty">&nbsp;</p>
 
-      <h2>Nos valeurs</h2>
-      <ul>
-        <li><strong>Innovation</strong> - repousser les limites chaque jour</li>
-        <li><strong>Simplicité</strong> - une interface à la portée de tous</li>
-        <li><strong>Fiabilité</strong> - un logiciel sur lequel vous pouvez compter</li>
-      </ul>
+          <div class="article">
+            <p><span class="prompt2">[MISSION]</span></p>
+            <p class="dim">Chez Axion, nous croyons que la technologie doit etre simple, belle et accessible. Notre mission est de creer des outils qui allient performance et elegance, pour que chacun puisse se concentrer sur l'essentiel.</p>
+
+            <p class="line empty">&nbsp;</p>
+            <p><span class="prompt2">[VALEURS]</span></p>
+            <p class="dim">&gt; INNOVATION   - repousser les limites chaque jour</p>
+            <p class="dim">&gt; SIMPLICITE   - une interface a la portee de tous</p>
+            <p class="dim">&gt; FIABILITE    - un logiciel sur lequel vous pouvez compter</p>
+          </div>
+
+          <p class="line empty">&nbsp;</p>
+          <p class="line"><span class="prompt2">C:\AXION&gt;</span> axion --status</p>
+          <p class="line ok">&gt;&gt; [OK] systeme operationnel</p>
+          <p class="line ok">&gt;&gt; [OK] integrations actives : 3</p>
+          <p class="line ok">&gt;&gt; [OK] aucune anomalie detectee</p>
+          <p class="line empty">&nbsp;</p>
+          <p class="line blink">C:\AXION&gt;_</p>
+
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Axion - Tous droits réservés</p>
+    <p>c:\axion system v2.0 &nbsp;|&nbsp; (c) 2026 Axion Corporation - Tous droits reserves</p>
   </footer>
 
   <script src="script.js"></script>

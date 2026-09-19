@@ -1,33 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const reveals = document.querySelectorAll('.reveal');
+  const typedEl = document.getElementById('typed-text');
+  const outputEl = document.getElementById('typed-output');
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const delay = entry.target.dataset.delay || 0;
-          entry.target.style.transitionDelay = delay + 'ms';
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  if (typedEl && outputEl) {
+    const command = 'axion --version';
+    const lines = [
+      'AXION v2.0.1  (build 2026.09)',
+      'Le logiciel qui propulse vos projets vers l\'ultime performance.',
+      '> execution en cours...'
+    ];
 
-  reveals.forEach((el) => observer.observe(el));
+    let i = 0;
+    const type = () => {
+      if (i <= command.length) {
+        typedEl.textContent = command.slice(0, i);
+        i++;
+        setTimeout(type, 70);
+      } else {
+        outputEl.innerHTML = '';
+        lines.forEach((text, index) => {
+          const p = document.createElement('p');
+          p.className = 'line dim out-line';
+          p.textContent = text;
+          outputEl.appendChild(p);
+          setTimeout(() => {
+            p.style.opacity = '1';
+          }, 250 * (index + 1));
+        });
+      }
+    };
+    setTimeout(type, 600);
+  }
 
   const form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const status = document.getElementById('form-status');
-      status.textContent = 'Merci ! Votre message a bien été envoyé.';
-      status.style.color = '#7dffb0';
+      status.textContent = '>> [OK] message transmis. code de suivi : AX-2026';
       form.reset();
       setTimeout(() => {
         status.textContent = '';
-      }, 4000);
+      }, 5000);
     });
   }
 });
