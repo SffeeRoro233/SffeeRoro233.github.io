@@ -1,47 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const typedEl = document.getElementById('typed-text');
-  const outputEl = document.getElementById('typed-output');
+  const navbar = document.getElementById('navbar');
+  const revealItems = document.querySelectorAll('.reveal');
+  const switchButtons = document.querySelectorAll('[data-page]');
+  const pageOne = document.getElementById('toolsPage1');
+  const pageTwo = document.getElementById('toolsPage2');
+  const pageLabel = document.getElementById('pageLabel');
 
-  if (typedEl && outputEl) {
-    const command = 'axion --version';
-    const lines = [
-      'AXION v2.0.1  (build 2026.09)',
-      'Le logiciel qui propulse vos projets vers l\'ultime performance.',
-      '> execution en cours...'
-    ];
+  const updateNavbar = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 24);
+  };
 
-    let i = 0;
-    const type = () => {
-      if (i <= command.length) {
-        typedEl.textContent = command.slice(0, i);
-        i++;
-        setTimeout(type, 70);
-      } else {
-        outputEl.innerHTML = '';
-        lines.forEach((text, index) => {
-          const p = document.createElement('p');
-          p.className = 'line dim out-line';
-          p.textContent = text;
-          outputEl.appendChild(p);
-          setTimeout(() => {
-            p.style.opacity = '1';
-          }, 250 * (index + 1));
-        });
+  updateNavbar();
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
-    };
-    setTimeout(type, 600);
-  }
-
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const status = document.getElementById('form-status');
-      status.textContent = '>> [OK] message transmis. code de suivi : AX-2026';
-      form.reset();
-      setTimeout(() => {
-        status.textContent = '';
-      }, 5000);
     });
-  }
+  }, { threshold: 0.14 });
+
+  revealItems.forEach((item) => observer.observe(item));
+
+  switchButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const page = button.dataset.page;
+      switchButtons.forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
+      pageOne.classList.toggle('active', page === '1');
+      pageTwo.classList.toggle('active', page === '2');
+      pageLabel.textContent = `PAGE ${page} / 2`;
+    });
+  });
 });

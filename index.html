@@ -1,92 +1,178 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Axion - Un logiciel performant et moderne">
-  <title>axion - cmd</title>
+  <meta name="description" content="AXION is a lightweight open-source terminal multitool by ScripthubDev.">
+  <title>AXION - Open-Source Terminal Multitool</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site-glow glow-a"></div>
+  <div class="site-glow glow-b"></div>
 
-  <header class="banner">
-    <div class="terminal-bar">
-      <div class="win-controls">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-      </div>
-      <div class="win-title">
-        <span class="logo">
-          <img class="logo-img" src="logo.png" alt="Axion logo" onerror="this.style.display='none'">
-          <span class="logo-fallback">AXION</span>
-        </span>
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li><span class="prompt">C:\AXION&gt;</span><a href="index.html" class="active">acceuil.exe</a></li>
-        <li><span class="prompt">C:\AXION&gt;</span><a href="a-propos.html">apropos.exe</a></li>
-        <li><span class="prompt">C:\AXION&gt;</span><a href="contact.html">contact.exe</a></li>
-      </ul>
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#overview" aria-label="AXION home">
+      <img src="logo.png" alt="AXION logo" class="brand-logo">
+      <span>AXION</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#overview">Overview</a>
+      <a href="#features">Features</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#versions">Versions</a>
+      <a href="https://github.com/SffeeRoro233/Axion-Multitool" target="_blank" rel="noreferrer">GitHub</a>
     </nav>
+    <a class="nav-cta" href="https://github.com/SffeeRoro233/Axion-Multitool" target="_blank" rel="noreferrer">View on GitHub</a>
   </header>
 
   <main>
-    <section class="terminal">
-      <div class="term-window">
-        <div class="term-body" id="home-screen">
+    <section class="hero section" id="overview">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Open-source terminal multitool</p>
+        <h1 class="hero-title" aria-label="AXION">AXION</h1>
+        <p class="hero-kicker">Simple. Lightweight. Open-Source.</p>
+        <p class="hero-text">A lightweight multitool built for speed, simplicity and customization across Windows, Linux and macOS.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/SffeeRoro233/Axion-Multitool/releases" target="_blank" rel="noreferrer">Download / View Releases</a>
+          <a class="btn btn-secondary" href="https://github.com/SffeeRoro233/Axion-Multitool" target="_blank" rel="noreferrer">View on GitHub</a>
+        </div>
+      </div>
 
-          <p class="line"><span class="prompt2">Microsoft Windows [Version 10.0.22621.1]</span></p>
-          <p class="line"><span class="prompt2">(c) Axion Corporation. Tous droits reserves.</span></p>
-          <p class="line empty">&nbsp;</p>
-
-          <pre class="ascii-art">
-    _    _  ___ _____ ___  _  _
-   /_\  | |/ _ \_   _/ _ \| \| |
-  / _ \ | | (_) || || (_) | .` |
- /_/ \_\_|_|\___/ |_| \___/|_|\_|
-          </pre>
-          <p class="line empty">&nbsp;</p>
-
-          <p class="line"><span class="prompt2">C:\AXION&gt;</span><span id="typed-text" class="typed"></span><span class="cursor">█</span></p>
-          <p class="line empty">&nbsp;</p>
-
-          <div class="out-block" id="typed-output"></div>
-
-          <div class="cards">
-            <div class="card">
-              <p><span class="prompt2">[MODULE 01]</span> ULTRA_RAPIDE</p>
-              <p class="dim">Des performances optimisees pour gagner du temps a chaque execution.</p>
-              <p class="ok">&gt;&gt; [OK] module initialise</p>
-            </div>
-            <div class="card">
-              <p><span class="prompt2">[MODULE 02]</span> DESIGN_MODERNE</p>
-              <p class="dim">Une interface elegante, fluide et intuitive integrée au systeme.</p>
-              <p class="ok">&gt;&gt; [OK] module initialise</p>
-            </div>
-            <div class="card">
-              <p><span class="prompt2">[MODULE 03]</span> SECURITE_MAX</p>
-              <p class="dim">Vos donnees protegees par les standards de chiffrement les plus avances.</p>
-              <p class="ok">&gt;&gt; [OK] module initialise</p>
-            </div>
+      <div class="terminal hero-terminal reveal" aria-label="AXION terminal preview">
+        <div class="terminal-top">
+          <div class="traffic"><span></span><span></span><span></span></div>
+          <span class="terminal-title">Axion.bat - Windows Edition</span>
+          <span class="terminal-version">v3.0.1</span>
+        </div>
+        <div class="terminal-body">
+          <pre class="ascii wave">    ___    __  __ ___ ___  _  _
+   / _ \   \ \/ // _ \_ _|| \| |
+  / /_\ \   \  /| | | | | | .` |
+  |  _  |   /  \| |_| | | | |\ |
+  |_| |_|  /_/\_\\___/___||_| \_|</pre>
+          <p class="terminal-line accent">WINDOWS EDITION <span>v3.0.1</span></p>
+          <p class="terminal-line muted">Simple Batch Multi-Tool</p>
+          <div class="terminal-grid">
+            <div><b>INTERNET</b><span>[01] Website</span><span>[02] Speedtest</span><span>[03] Website Status</span><span>[04] Whois Lookup</span></div>
+            <div><b>SOCIAL NETWORKS</b><span>[05] Discord</span><span>[06] YouTube</span><span>[07] Twitch</span><span>[08] Reddit</span></div>
+            <div><b>APPLICATIONS</b><span>[09] Roblox</span><span>[10] Steam</span><span>[11] Spotify</span><span>[12] Browser</span></div>
           </div>
-
-          <p class="line empty">&nbsp;</p>
-          <p class="line"><span class="prompt2">C:\AXION&gt;</span> axion --help</p>
-          <p class="line dim">  --exec acceuil       : demarrer la page d'acceuil</p>
-          <p class="line dim">  --exec apropos       : afficher les informations sur le logiciel</p>
-          <p class="line dim">  --exec contact       : ouvrir un canal de communication</p>
-          <p class="line empty">&nbsp;</p>
-          <p class="line blink">C:\AXION&gt;_</p>
-
+          <p class="launch">LAUNCH &gt;<span class="cursor"></span></p>
         </div>
       </div>
     </section>
+
+    <section class="section two-col" id="what">
+      <div class="section-copy reveal">
+        <p class="eyebrow">What is Axion?</p>
+        <h2>Built like a terminal tool, not a generic app.</h2>
+        <p>Axion is a lightweight open-source multitool designed to provide quick access to useful tools, applications, network utilities and system information from a clean terminal interface.</p>
+      </div>
+      <div class="value-grid reveal">
+        <article class="mini-card"><span>01</span><h3>Simple</h3><p>Direct launcher flow with clear terminal navigation.</p></article>
+        <article class="mini-card"><span>02</span><h3>Fast</h3><p>Quick access to tools, folders, apps and network checks.</p></article>
+        <article class="mini-card"><span>03</span><h3>Customizable</h3><p>Batch and shell scripts make it easy to modify.</p></article>
+        <article class="mini-card"><span>04</span><h3>Open-source</h3><p>Inspect it, fork it and build your own version.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="platforms">
+      <div class="section-head reveal">
+        <p class="eyebrow">Current versions</p>
+        <h2>Available across multiple systems.</h2>
+      </div>
+      <div class="version-grid">
+        <article class="version-card reveal"><div><h3>Windows</h3><span class="status supported">Supported</span></div><strong>v3.0.1</strong><p>The original and currently most complete Axion edition.</p><small>Windows 10 / Windows 11</small></article>
+        <article class="version-card reveal"><div><h3>Linux</h3><span class="status supported">Supported</span></div><strong>lnx-v1.0.1</strong><p>Linux-compatible edition using Bash. Tested on Omarchy and expected to work on most desktop Linux distributions.</p></article>
+        <article class="version-card reveal"><div><h3>macOS</h3><span class="status testing">Testing</span></div><strong>mac-v1.0.0</strong><p>The first macOS edition. Compatibility and stability testing are still in progress.</p></article>
+        <article class="version-card reveal"><div><h3>Windows EXE</h3><span class="status planned">Planned</span></div><strong>Coming Soon</strong><p>A native Windows executable version is planned for the future.</p></article>
+      </div>
+    </section>
+
+    <section class="section interface-section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Windows interface</p>
+        <h2>24 tools. Two pages. One interface.</h2>
+      </div>
+      <div class="interface-wrap reveal">
+        <div class="page-switch" role="tablist" aria-label="Terminal page preview">
+          <button class="active" type="button" data-page="1">Page 1</button>
+          <button type="button" data-page="2">Page 2</button>
+        </div>
+        <div class="terminal menu-terminal">
+          <div class="terminal-top"><div class="traffic"><span></span><span></span><span></span></div><span class="terminal-title">AXION MENU PREVIEW</span><span id="pageLabel">PAGE 1 / 2</span></div>
+          <div class="terminal-body">
+            <div class="tool-grid active" id="toolsPage1">
+              <div><h4>INTERNET</h4><p>[01] Website</p><p>[02] Speedtest</p><p>[03] Website Status</p><p>[04] Whois Lookup</p></div>
+              <div><h4>SOCIAL NETWORKS</h4><p>[05] Discord</p><p>[06] YouTube</p><p>[07] Twitch</p><p>[08] Reddit</p></div>
+              <div><h4>APPLICATIONS</h4><p>[09] Roblox</p><p>[10] Steam</p><p>[11] Spotify</p><p>[12] Browser</p></div>
+            </div>
+            <div class="tool-grid" id="toolsPage2">
+              <div><h4>SYSTEM</h4><p>[13] System Info</p><p>[14] Task Manager</p><p>[15] Disk Information</p><p>[16] Startup Apps</p></div>
+              <div><h4>NETWORK</h4><p>[17] DNS Test</p><p>[18] IP Information</p><p>[19] Ping Test</p><p>[20] Network Info</p></div>
+              <div><h4>QUICK ACCESS</h4><p>[21] Downloads</p><p>[22] Documents</p><p>[23] Desktop</p><p>[24] AppData</p></div>
+            </div>
+            <div class="menu-bottom"><span>[N] Next Page</span><span>[P] Previous</span><span>[G] Check Update</span><span>[E] Exit</span></div>
+            <p class="launch">LAUNCH &gt;<span class="cursor"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-head reveal"><p class="eyebrow">Features</p><h2>Everything Axion currently focuses on.</h2></div>
+      <div class="features-grid">
+        <article class="feature-card reveal"><h3>Animated Startup</h3><p>Custom AXION ASCII animation with wave movement and animated pink, purple and blue colors.</p></article>
+        <article class="feature-card reveal"><h3>Terminal Speedtest</h3><p>Run a connection test directly from Axion.</p></article>
+        <article class="feature-card reveal"><h3>Website Status</h3><p>Check whether a website is reachable and view response information.</p></article>
+        <article class="feature-card reveal"><h3>Whois Lookup</h3><p>Retrieve public information about domains using Whois / RDAP.</p></article>
+        <article class="feature-card reveal"><h3>System Information</h3><p>Quickly display useful Windows hardware and system information.</p></article>
+        <article class="feature-card reveal"><h3>Network Utilities</h3><p>DNS, IP information, ping and network adapter utilities.</p></article>
+        <article class="feature-card reveal"><h3>Quick Access</h3><p>Open Downloads, Documents, Desktop and AppData directly.</p></article>
+        <article class="feature-card reveal"><h3>Application Launcher</h3><p>Quickly launch apps and services such as Roblox, Steam and Spotify.</p></article>
+        <article class="feature-card reveal"><h3>Open Source</h3><p>The entire project can be inspected and customized.</p></article>
+      </div>
+    </section>
+
+    <section class="section platform-strip">
+      <div class="platform-item reveal"><span class="indicator supported-dot"></span><b>Windows</b><em>Supported</em></div>
+      <div class="platform-item reveal"><span class="indicator supported-dot"></span><b>Linux</b><em>Supported</em></div>
+      <div class="platform-item reveal"><span class="indicator testing-dot"></span><b>macOS</b><em>Testing</em></div>
+      <div class="platform-item reveal"><span class="indicator planned-dot"></span><b>Native EXE</b><em>Coming Soon</em></div>
+    </section>
+
+    <section class="section" id="versions">
+      <div class="section-head reveal"><p class="eyebrow">Version history</p><h2>A clear roadmap of Axion releases.</h2></div>
+      <div class="timeline reveal">
+        <div class="timeline-group"><h3>Windows</h3><p><b>v1.0.0</b> First Windows version</p><p><b>v1.5.0</b> Interface and tool improvements</p><p><b>v2.0.0</b> Major interface redesign</p><p><b>v2.1.0</b> Additional interface and compatibility improvements</p><p><b>v2.2.0</b> New Internet and Social Network options</p><p><b>v2.5.0</b> Major startup and interface update</p><p><b>v3.0.0</b> Major Multi-Page & Utility Update</p><p><b>v3.0.1</b> Animation, interface polish and stability update</p></div>
+        <div class="timeline-group"><h3>Linux</h3><p><b>lnx-v1.0.0</b> First official Linux edition</p><p><b>lnx-v1.0.1</b> Linux launch and installation improvements</p></div>
+        <div class="timeline-group"><h3>macOS</h3><p><b>mac-v1.0.0</b> First macOS testing edition</p></div>
+      </div>
+    </section>
+
+    <section class="section open-source" id="github">
+      <div class="section-copy reveal"><p class="eyebrow">Open source</p><h2>Built to be modified.</h2><p>Axion is completely open-source. Explore the source code, customize the interface, add your own tools and create your own version.</p><a class="btn btn-primary" href="https://github.com/SffeeRoro233/Axion-Multitool" target="_blank" rel="noreferrer">Explore Source Code</a></div>
+      <div class="terminal source-terminal reveal"><div class="terminal-top"><div class="traffic"><span></span><span></span><span></span></div><span class="terminal-title">source tree</span></div><div class="terminal-body"><pre>Axion/
+|-- Axion.bat
+`-- fils/
+    |-- SpeedTest.bat
+    |-- WebsiteStatus.bat
+    |-- WhoisLookup.bat
+    `-- ...</pre></div></div>
+    </section>
+
+    <section class="final-cta section reveal">
+      <p class="eyebrow">Download / GitHub</p>
+      <h2>Ready to try Axion?</h2>
+      <p>Download the latest release or explore the project on GitHub.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="https://github.com/SffeeRoro233/Axion-Multitool" target="_blank" rel="noreferrer">View on GitHub</a><a class="btn btn-secondary" href="https://github.com/SffeeRoro233/Axion-Multitool/releases" target="_blank" rel="noreferrer">View Releases</a></div>
+    </section>
   </main>
 
-  <footer>
-    <p>c:\axion system v2.0 &nbsp;|&nbsp; (c) 2026 Axion Corporation - Tous droits reserves</p>
+  <footer class="footer">
+    <div><strong>AXION</strong><p>Simple / Lightweight / Open-Source</p><p>Made with love by ScripthubDev</p></div>
+    <div class="footer-links"><a href="https://github.com/SffeeRoro233/Axion-Multitool" target="_blank" rel="noreferrer">GitHub</a><a href="https://github.com/SffeeRoro233/Axion-Multitool/releases" target="_blank" rel="noreferrer">Releases</a><a href="#platforms">Windows</a><a href="#platforms">Linux</a><a href="#platforms">macOS</a></div>
   </footer>
 
   <script src="script.js"></script>
