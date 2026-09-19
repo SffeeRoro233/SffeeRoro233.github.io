@@ -46,7 +46,7 @@ a { color: inherit; text-decoration: none; }
 }
 .navbar.scrolled { background: rgba(8, 8, 14, 0.92); border-color: rgba(255, 20, 130, 0.28); box-shadow: 0 0 32px rgba(170, 35, 245, 0.12); }
 .brand { display: flex; align-items: center; gap: 0.65rem; font-family: var(--mono); font-weight: 800; letter-spacing: 0.08em; }
-.brand-logo { width: 2rem; height: 2rem; object-fit: contain; border-radius: 0.35rem; }
+.brand-logo { width: 2.15rem; height: 2.15rem; object-fit: contain; border-radius: 0.35rem; }
 .nav-links { display: flex; align-items: center; gap: 1.1rem; color: var(--muted); font-size: 0.92rem; }
 .nav-links a:hover { color: var(--text); }
 .nav-cta { padding: 0.62rem 1rem; border-radius: 999px; background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue)); font-weight: 700; font-size: 0.9rem; }
@@ -182,6 +182,31 @@ a { color: inherit; text-decoration: none; }
 .traffic span:nth-child(2) { background: var(--purple); }
 .traffic span:nth-child(3) { background: var(--blue); }
 .terminal-body { padding: 1.2rem; font-family: var(--mono); }
+.terminal-logo-box {
+  width: min(100%, 430px);
+  margin: 0 auto 1rem;
+  padding: 0.85rem 0.9rem 0.9rem;
+  text-align: center;
+  background: #070707;
+  border: 2px solid var(--pink);
+  border-bottom-color: var(--violet);
+  outline: 1px solid rgba(120, 55, 255, 0.7);
+  outline-offset: -5px;
+  box-shadow: 0 0 18px rgba(255, 20, 130, 0.12);
+}
+.terminal-logo-img {
+  width: min(100%, 330px);
+  max-height: 135px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 0.35rem;
+  animation: softWave 4s ease-in-out infinite;
+}
+.terminal-logo-box p {
+  color: var(--magenta);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
 .ascii { font-size: clamp(0.62rem, 1vw, 0.88rem); line-height: 1.1; margin-bottom: 1rem; background: linear-gradient(90deg, var(--pink), var(--magenta), var(--purple), var(--blue)); background-size: 220% 220%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gradientShift 5s ease infinite; }
 .terminal-line { color: var(--text); margin-bottom: 0.35rem; }
 .terminal-line.accent { color: var(--pink); font-weight: 800; }
