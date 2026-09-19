@@ -53,6 +53,118 @@ a { color: inherit; text-decoration: none; }
 
 .section { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 6.2rem 0; }
 .hero { min-height: 100vh; display: grid; grid-template-columns: 0.95fr 1.05fr; align-items: center; gap: 3rem; padding-top: 9rem; }
+.axion-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 6.5rem;
+  font-family: var(--mono);
+}
+.axion-app {
+  width: min(100%, 980px);
+  min-height: 34rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #efedf6;
+  background: #070707;
+  border-radius: 0.35rem;
+  padding: 2rem 1rem 1rem;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04), 0 30px 90px rgba(0,0,0,0.6);
+}
+.axion-logo-frame {
+  width: min(560px, 100%);
+  border: 2px solid var(--pink);
+  border-bottom-color: var(--violet);
+  outline: 2px solid rgba(120, 55, 255, 0.75);
+  outline-offset: -6px;
+  padding: 1.2rem 1.3rem 1.35rem;
+  text-align: center;
+  background: #080808;
+  box-shadow: 0 0 20px rgba(255, 20, 130, 0.12);
+}
+.axion-main-logo {
+  display: block;
+  width: min(390px, 92%);
+  max-height: 170px;
+  object-fit: contain;
+  margin: 0 auto 0.55rem;
+  animation: softWave 4s ease-in-out infinite;
+}
+.axion-logo-frame p {
+  color: var(--magenta);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+.app-subtitle {
+  text-align: center;
+  margin: 1.55rem 0 1.75rem;
+}
+.app-subtitle strong {
+  display: block;
+  color: var(--magenta);
+  margin-bottom: 0.15rem;
+}
+.app-subtitle a {
+  color: #77737f;
+  font-weight: 700;
+}
+.app-subtitle a:hover { color: var(--text); }
+.app-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min(730px, 100%);
+  border: 2px solid var(--magenta);
+  border-bottom-color: var(--violet);
+  background: #080808;
+}
+.app-col {
+  padding: 0.65rem 1rem 0.75rem;
+  border-right: 2px solid var(--magenta);
+}
+.app-col:last-child { border-right: 0; }
+.app-col h2 {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #f4f0fb;
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.65rem;
+  border-bottom: 2px solid var(--magenta);
+}
+.app-col p {
+  font-weight: 800;
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+.app-col span { color: var(--magenta); }
+.app-controls {
+  width: min(920px, 100%);
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 1fr;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: 0.8rem;
+}
+.app-controls .launch {
+  color: var(--magenta);
+  margin: 0;
+  justify-self: start;
+}
+.control {
+  font-weight: 800;
+  white-space: nowrap;
+}
+.control.purple { color: var(--violet); }
+.control.blue { color: #22b7ff; }
+.control.pink { color: var(--pink); }
+.control:hover { color: var(--text); }
+.page-count {
+  color: #77737f;
+  justify-self: end;
+  font-weight: 800;
+}
 .eyebrow { font-family: var(--mono); color: var(--magenta); text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem; margin-bottom: 0.9rem; }
 .hero-title { font-size: clamp(4rem, 10vw, 8.8rem); line-height: 0.85; letter-spacing: -0.08em; background: linear-gradient(100deg, var(--pink), var(--magenta), var(--purple), var(--blue)); background-size: 220% 220%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gradientShift 7s ease infinite, softWave 4s ease-in-out infinite; text-shadow: 0 0 36px rgba(245, 20, 175, 0.12); }
 .hero-kicker { font-size: 1.3rem; font-weight: 800; margin-top: 1.4rem; }
@@ -142,6 +254,9 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .hero, .two-col, .open-source { grid-template-columns: 1fr; }
+  .axion-screen { padding-top: 6rem; }
+  .app-controls { grid-template-columns: 1fr 1fr; text-align: center; gap: 0.75rem; }
+  .app-controls .launch, .page-count { justify-self: center; }
   .version-grid, .features-grid, .platform-strip { grid-template-columns: repeat(2, 1fr); }
   .terminal-grid, .tool-grid { grid-template-columns: 1fr; }
   .terminal-grid div, .tool-grid div { border-right: 0; border-bottom: 1px solid rgba(255,20,130,0.32); }
@@ -153,6 +268,13 @@ a { color: inherit; text-decoration: none; }
   .nav-cta { display: none; }
   .section { width: min(100% - 1rem, 1120px); padding: 4rem 0; }
   .hero { padding-top: 7rem; }
+  .axion-app { padding: 1rem 0.6rem; min-height: auto; }
+  .axion-logo-frame { padding: 0.9rem 0.6rem 1rem; }
+  .axion-main-logo { max-height: 125px; }
+  .app-menu { grid-template-columns: 1fr; }
+  .app-col { border-right: 0; border-bottom: 2px solid var(--magenta); }
+  .app-col:last-child { border-bottom: 0; }
+  .app-controls { grid-template-columns: 1fr; }
   .value-grid, .version-grid, .features-grid, .platform-strip { grid-template-columns: 1fr; }
   .terminal-body { padding: 0.9rem; }
   .menu-bottom { flex-direction: column; }
